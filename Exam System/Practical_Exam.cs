@@ -14,7 +14,6 @@ namespace Exam_System
             mcq.AddQuestion();
             ArrOfQuetions.Add(mcq);
         }
-
         public override void ShowExam()
         {
             int grade = 0;
