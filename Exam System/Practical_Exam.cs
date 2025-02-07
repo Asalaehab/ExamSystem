@@ -61,9 +61,12 @@ namespace Exam_System
 
             }
             Grade = grade;
+
+            Console.Clear ();
+            Console.WriteLine("The Right Answers");
             for (int i = 0; i < ArrOfQuetions.Count; i++)
             {
-                Console.WriteLine($"Question No.{i + 1}:  {ArrOfQuetions[i].RightAnswer}");
+                Console.WriteLine($"Q{i + 1}) : {ArrOfQuetions[i].RightAnswer.AnswerText}");
             }
 
         }
