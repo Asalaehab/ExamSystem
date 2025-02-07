@@ -14,6 +14,8 @@ namespace Exam_System
             mcq.AddQuestion();
             ArrOfQuetions.Add(mcq);
         }
+
+
         public override void ShowExam()
         {
             int grade = 0;
@@ -22,9 +24,6 @@ namespace Exam_System
             for (int i = 0; i < ArrOfQuetions.Count; i++)
             {
                 Console.Clear();
-                Console.WriteLine(ArrOfQuetions[i].Body);
-                Console.WriteLine("======================================================");
-
                 ArrOfQuetions[i].Display();
                 int ansId = 0;
                 string selectedAnswerText = "";
@@ -46,7 +45,6 @@ namespace Exam_System
 
                     selectedAnswerText = mcqQuestion.choices[ansId - 1];
 
-
                 }
                 ArrOfAnswers[i] = new Answers(ansId, selectedAnswerText);
                 if (ArrOfQuetions[i].RightAnswer.Equals(ArrOfAnswers[i]))
@@ -60,7 +58,6 @@ namespace Exam_System
 
             }
             Grade = grade;
-
             Console.Clear ();
             Console.WriteLine("The Right Answers");
             for (int i = 0; i < ArrOfQuetions.Count; i++)
