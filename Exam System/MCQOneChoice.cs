@@ -20,8 +20,6 @@ namespace Exam_System
         {
             //take Body and Mark.
             base.AddQuestion();
-
-
             Console.WriteLine("Enter the Choices Of the Questions : ");
             Console.WriteLine("=======================================================");
             Console.WriteLine();
@@ -35,11 +33,10 @@ namespace Exam_System
                     choices.Add(choice);
 
                 }
-
                 else
                 {
                     Console.WriteLine("Choice cannot be empty. Please enter a valid choice.");
-                    i--; // Decrement i to re-enter this choice
+                    i--; 
                 }
 
             }
@@ -64,18 +61,5 @@ namespace Exam_System
                 answers[i] = new Answers(i + 1, choices[i]);
             }
         }
-
-
-        //public override void Display()
-        //{
-        //    base.Display();
-
-        //    for (int i = 0; i < choices.Count; i++)
-        //    {
-        //        //Console.WriteLine($"{i + 1}. {choices[i]}");
-
-        //        Console.WriteLine(answers[i]);
-        //    }
-        //}
     }
 }
