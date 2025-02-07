@@ -16,19 +16,19 @@ namespace Exam_System
 
         #endregion
 
-        //Dont forget Validations
+        
         #region Properties
 
         public int SubjectId
         {
             get { return subjectId; }
-            set { subjectId = value; }
+            set {if(value>=1) subjectId = value;else Console.WriteLine("Invalid"); }
         }
 
         public string? SubjectName
         {
             get { return subjectName; }
-            set { subjectName = value; }
+            set { if (!string.IsNullOrEmpty(value)) subjectName = value; else Console.WriteLine("Invaid"); }
         }
 
         public Exam? Exam { get; set; }
@@ -97,6 +97,7 @@ namespace Exam_System
             Exam.Time = t;
             for (int i = 0; i < numberOfQuestion; i++)
             {
+                Console.Clear();
                 //To set Exam Questions
                 Exam.MakeExamQuestions();
             }

@@ -66,16 +66,16 @@ namespace Exam_System
         }
 
 
-        public override void Display()
-        {
-            base.Display();
+        //public override void Display()
+        //{
+        //    base.Display();
 
-            for (int i = 0; i < choices.Count; i++)
-            {
-                //Console.WriteLine($"{i + 1}. {choices[i]}");
+        //    for (int i = 0; i < choices.Count; i++)
+        //    {
+        //        //Console.WriteLine($"{i + 1}. {choices[i]}");
 
-                Console.WriteLine(answers[i]);
-            }
-        }
+        //        Console.WriteLine(answers[i]);
+        //    }
+        //}
     }
 }

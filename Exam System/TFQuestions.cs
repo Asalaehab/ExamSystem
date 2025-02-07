@@ -12,12 +12,16 @@ namespace Exam_System
         public TFQuestions()
         {
             Header = "True | False Question";
+            answers = new Answers[2];
+           
         }
 
         public override void AddQuestion()
         {
 
             base.AddQuestion();
+            answers[0] = new Answers(1, "True");
+            answers[1] = new Answers(2, "True");
             bool flag;
             int rightAns = 0;
             do
@@ -31,14 +35,8 @@ namespace Exam_System
             string textans = (rightAns == 1) ? "True" : "False";
             RightAnswer = new(rightAns, textans);
 
-
         }
 
-        public override void Display()
-        {
-            base.Display();
-
-            Console.WriteLine("1. True                       2.False");
-        }
+     
     }
 }
