@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Exam_System
 {
+
     internal class QuestionBase
     {
 
@@ -63,7 +65,7 @@ namespace Exam_System
         public Answers[]? answers { get; set; }
         #endregion
 
-        #region Methods
+        #region Method
         public virtual void Display()
         {
             Console.WriteLine($"{Header}:");
@@ -71,7 +73,7 @@ namespace Exam_System
             Console.WriteLine($"{Body}\t Mark({Mark})");
             for(int i = 0;i<answers.Length;i++)
             {
-                Console.WriteLine(answers[i].ToString());
+                Console.WriteLine(answers[i]);
             }
         }
 

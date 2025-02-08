@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Exam_System
@@ -47,6 +48,7 @@ namespace Exam_System
 
         #region Methods
 
+    
 
         public void CreateExam()
         {
@@ -68,6 +70,7 @@ namespace Exam_System
             {
                 Console.Write("Enter the Time For Exam in Minutes : ");
                 flag = int.TryParse(Console.ReadLine(), out t);
+                if(t<=0) flag=false;
             } while (!flag);
 
 
@@ -76,6 +79,7 @@ namespace Exam_System
             {
                 Console.Write("Enter number of Questions you Want To Create : ");
                 flag = int.TryParse(Console.ReadLine(), out numberOfQuestion);
+                if(numberOfQuestion <= 0) flag=false;
             } while (!flag);
 
 
