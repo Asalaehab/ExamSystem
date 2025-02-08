@@ -71,10 +71,11 @@ namespace Exam_System
             Console.WriteLine($"{Header}:");
             Console.WriteLine("----------------------------------------------------------");
             Console.WriteLine($"{Body}\t Mark({Mark})");
-            for(int i = 0;i<answers.Length;i++)
-            {
-                Console.WriteLine(answers[i]);
-            }
+            if (answers is not null)
+                for (int i = 0; i < answers.Length; i++)
+                {
+                    Console.WriteLine(answers[i]);
+                }
         }
 
         public virtual void AddQuestion()
